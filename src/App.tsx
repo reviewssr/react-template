@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.less';
+import { Button } from 'antd';
+import styled from '@emotion/styled';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EmotionButton type="primary">antd button</EmotionButton>
     </div>
   );
 }
 
 export default App;
+
+const EmotionButton = styled(Button)`
+  margin: 20rem;
+`;
+
+// test format
+const foo = () => {
+  for (let i = 0; i < 10; i++) console.log('Hello!');
+};
